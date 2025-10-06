@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Votos Foz do Arelho - Análise Eleitoral 2001-2021</title>
+    <meta name="description" content="Análise completa dos resultados eleitorais da Foz do Arelho de 2001 a 2021. Visualização interativa dos votos por partido com gráficos e tabelas detalhadas.">
+    <meta name="keywords" content="eleições, Foz do Arelho, votos, análise eleitoral, partidos políticos, PS, PSD, MIFA, CDS, BE, PCP, resultados eleitorais">
+    <meta name="author" content="Nuno Santos">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="pt">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="Votos Foz do Arelho - Análise Eleitoral 2001-2021">
+    <meta property="og:description" content="Análise completa dos resultados eleitorais da Foz do Arelho de 2001 a 2021. Visualização interativa dos votos por partido.">
+    <meta property="og:image" content="imagens/logo.png">
+    <meta property="og:image:alt" content="Logo Análise Eleitoral Foz do Arelho">
+    <meta property="og:locale" content="pt_PT">
+    <meta property="og:site_name" content="Eleições Foz do Arelho">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="">
+    <meta property="twitter:title" content="Votos Foz do Arelho - Análise Eleitoral 2001-2021">
+    <meta property="twitter:description" content="Análise completa dos resultados eleitorais da Foz do Arelho de 2001 a 2021. Visualização interativa dos votos por partido.">
+    <meta property="twitter:image" content="imagens/logo.png">
+    <meta property="twitter:image:alt" content="Logo Análise Eleitoral Foz do Arelho">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/logo.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="imagens/logo.png">
+    <link rel="shortcut icon" href="imagens/logo.png">
+    
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#328F2C">
+    <meta name="msapplication-TileColor" content="#328F2C">
+    <meta name="msapplication-TileImage" content="imagens/logo.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="">
+    
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts@latest"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #ffffff 0%, #41C73D 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: #328F2C;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .chart-container {
+            padding: 40px;
+            background: white;
+        }
+        
+        .chart-wrapper {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-left: 4px solid #3498db;
+        }
+        
+        .stat-card h3 {
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .stat-card .number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #3498db;
+            margin: 0;
+        }
+        
+        .legend-custom {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 20px;
+            background: #f8f9fa;
+            border-radius: 25px;
+            font-size: 0.95em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .legend-item:hover {
+            background: #e9ecef;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .legend-partido-img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: none; /* Ocultar porque vamos usar as imagens */
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+        
+        .table-container {
+            margin-top: 40px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        
+        .table-header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .table-header h2 {
+            margin: 0;
+            font-size: 1.8em;
+            font-weight: 300;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95em;
+        }
+        
+        .data-table th {
+            background: #f8f9fa;
+            padding: 15px 10px;
+            text-align: center;
+            font-weight: 600;
+            color: #2c3e50;
+            border-bottom: 2px solid #dee2e6;
+            font-size: 0.9em;
+        }
+        
+        .data-table td {
+            padding: 12px 10px;
+            text-align: center;
+            border-bottom: 1px solid #dee2e6;
+            transition: background-color 0.2s ease;
+        }
+        
+        .data-table tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .partido-cell {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+        
+        .partido-img {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        .partido-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        
+        .summary-row {
+            background: #e9ecef !important;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .summary-row:hover {
+            background: #dee2e6 !important;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .chart-container {
+                padding: 20px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 15px;
+            }
+            
+            .data-table {
+                font-size: 0.8em;
+            }
+            
+            .data-table th,
+            .data-table td {
+                padding: 8px 5px;
+            }
+            
+            .partido-cell {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+        
+        .sources-container {
+            margin-top: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+        
+        .sources-header {
+            background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .sources-header h3 {
+            margin: 0;
+            font-size: 1.5em;
+            font-weight: 300;
+        }
+        
+        .sources-content {
+            padding: 25px;
+        }
+        
+        .election-source {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            margin-bottom: 10px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #27ae60;
+            transition: all 0.3s ease;
+        }
+        
+        .election-source:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+        
+        .election-year {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1em;
+        }
+        
+        .election-link {
+            color: #27ae60;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            background: white;
+            border-radius: 20px;
+            border: 2px solid #27ae60;
+            transition: all 0.3s ease;
+        }
+        
+        .election-link:hover {
+            background: #27ae60;
+            color: white;
+        }
+        
+        .placeholder-text {
+            color: #6c757d;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 Análise Eleitoral</h1>
+            <p>Votos por Partido nas Últimas 6 Eleições (2011-2021)</p>
+        </div>
+        
+        <div class="chart-container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3>Total de Eleições</h3>
+                    <p class="number">6</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Partidos Analisados</h3>
+                    <p class="number" id="totalPartidos">8</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Total de Votos</h3>
+                    <p class="number" id="totalVotos">0</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Maior Crescimento</h3>
+                    <p class="number" id="maiorCrescimento">-</p>
+                </div>
+            </div>
+            
+            <div class="chart-wrapper">
+                <div id="chart"></div>
+            </div>
+            
+            <div class="legend-custom" id="customLegend"></div>
+            
+            <div class="table-container">
+                <div class="table-header">
+                    <h2>📋 Dados Detalhados das Eleições</h2>
+                </div>
+                <div style="overflow-x: auto; padding: 20px;">
+                    <table class="data-table" id="dataTable">
+                        <thead>
+                            <tr>
+                                <th>Partido/Categoria</th>
+                                <th>2001</th>
+                                <th>2005</th>
+                                <th>2009</th>
+                                <th>2013</th>
+                                <th>2017</th>
+                                <th>2021</th>
+                                <th>Total</th>
+                                <th>Tendência</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <!-- Os dados serão inseridos dinamicamente via JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="sources-container">
+                <div class="sources-header">
+                    <h3>🔗 Fontes das Eleições</h3>
+                </div>
+                <div class="sources-content">
+                    <div class="election-source">
+                        <span class="election-year">📊 Eleições 2001</span>
+                        <a href="https://www.eleicoes.mai.gov.pt/autarquicas2001/D100000/C100600/F100606/100606_CM.html" target="_blank" class="election-link placeholder-text">ver fonte</a>
+                    </div>
+                    <div class="election-source">
+                        <span class="election-year">📊 Eleições 2005</span>
+                        <a href="https://www.eleicoes.mai.gov.pt/Autarquicas2005/CM/D10/C06.html" target="_blank" class="election-link placeholder-text">ver fonte</a>
+                    </div>
+                    <div class="election-source">
+                        <span class="election-year">📊 Eleições 2009</span>
+                        <a href="https://www.eleicoes.mai.gov.pt/autarquicas2009/#%00" target="_blank" class="election-link placeholder-text">ver fonte</a>
+                    </div>
+                    <div class="election-source">
+                        <span class="election-year">📊 Eleições 2013</span>
+                        <a href="https://www.eleicoes.mai.gov.pt/autarquicas2013/#%00" target="_blank" class="election-link placeholder-text">ver fonte</a>
+                    </div>
+                    <div class="election-source">
+                        <span class="election-year">📊 Eleições 2017</span>
+                        <a href="https://www.eleicoes.mai.gov.pt/autarquicas2017/#%00" target="_blank" class="election-link placeholder-text">ver fonte</a>
+                    </div>
+                    <div class="election-source">
+                        <span class="election-year">📊 Eleições 2021</span>
+                        <a href="https://www.eleicoes.mai.gov.pt/autarquicas2021/#%00" target="_blank" class="election-link placeholder-text">ver fonte</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Este site foi feito por <a href="https://www.instagram.com/nunosantosdev/" target="_blank" style="color: #E4405F; text-decoration: none; font-weight: bold;">📷 @nunosantos</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Dados das eleições (simulados mas realistas)
+        const dadosEleicoes = {
+            anos: ['2001', '2005', '2009', '2013', '2017', '2021'],
+            inscritos: [975, 1049, 1239, 1238, 1285, 1368],
+            votantes: [569, 685, 664, 707, 729, 797],
+            partidos: {
+                'MIFA': {
+                    votos: [0, 0, 0, 223, 245, 260],
+                    cor: '#328F2C'
+                },
+                'PSD': {
+                    votos: [358, 332, 348, 215, 218, 143],
+                    cor: '#F4660C'
+                },
+                'PS': {
+                    votos: [164, 194, 181, 78, 0, 31],
+                    cor: '#e3000a'
+                },
+                'PCP': {
+                    votos: [13, 14, 10, 13, 9, 8],
+                    cor: '#000000'
+                },
+                'BE': {
+                    votos: [7, 25, 51, 42, 52, 0],
+                    cor: '#DB0812'
+                },
+                'CDS': {
+                    votos: [0, 82, 59, 96, 122, 246],
+                    cor: '#0093DD'
+                },
+                'Nulos e Brancos': {
+                    votos: [27, 38, 15, 40, 35, 23],
+                    cor: '#6C757D'
+                },
+            }
+        };
+
+        // Preparar dados para o gráfico
+        function prepararDados() {
+            const series = [];
+            const cores = [];
+            
+            // Séries de barras (votos por ano)
+            Object.keys(dadosEleicoes.partidos).forEach(partido => {
+                series.push({
+                    name: `${partido} (Votos)`,
+                    type: 'column',
+                    data: dadosEleicoes.partidos[partido].votos
+                });
+                cores.push(dadosEleicoes.partidos[partido].cor);
+            });
+            
+            // Séries de linhas (tendência)
+            Object.keys(dadosEleicoes.partidos).forEach(partido => {
+                series.push({
+                    name: `${partido} (Tendência)`,
+                    type: 'line',
+                    data: dadosEleicoes.partidos[partido].votos
+                });
+                cores.push(dadosEleicoes.partidos[partido].cor);
+            });
+            
+            return { series, cores };
+        }
+
+        // Calcular estatísticas
+        function calcularEstatisticas() {
+            let totalVotos = 0;
+            let maiorCrescimento = '';
+            let maiorTaxaCrescimento = -Infinity;
+            
+            const partidosArray = Object.keys(dadosEleicoes.partidos);
+            
+            partidosArray.forEach(partido => {
+                const votos = dadosEleicoes.partidos[partido].votos;
+                totalVotos += votos.reduce((a, b) => a + b, 0);
+                
+                const crescimento = ((votos[votos.length - 1] - votos[0]) / votos[0]) * 100;
+                if (crescimento > maiorTaxaCrescimento) {
+                    maiorTaxaCrescimento = crescimento;
+                    maiorCrescimento = partido;
+                }
+            });
+            
+            // Atualizar os valores dinamicamente (excluir Nulos e Brancos da contagem de partidos)
+            const partidosPoliticos = partidosArray.filter(partido => partido !== 'Nulos e Brancos');
+            document.getElementById('totalPartidos').textContent = partidosPoliticos.length;
+            document.getElementById('totalVotos').textContent = totalVotos.toLocaleString();
+            document.getElementById('maiorCrescimento').textContent = maiorCrescimento;
+        }
+
+        // Mapeamento dos partidos para os arquivos de imagem
+        const imagensPartidos = {
+            'PS': 'ps.png',
+            'PSD': 'psd.png',
+            'BE': 'be.png',
+            'CDS': 'cds.png',
+            'PCP': 'pcp.png',
+            'MIFA': 'mifa.png'
+        };
+
+        // Criar legenda personalizada
+        function criarLegenda() {
+            const legendaContainer = document.getElementById('customLegend');
+            
+            Object.keys(dadosEleicoes.partidos).forEach(partido => {
+                const item = document.createElement('div');
+                item.className = 'legend-item';
+                
+                // Adicionar imagem do partido se existir
+                if (imagensPartidos[partido]) {
+                    const img = document.createElement('img');
+                    img.className = 'legend-partido-img';
+                    img.src = `imagens/${imagensPartidos[partido]}`;
+                    img.alt = `Logo ${partido}`;
+                    img.onerror = function() {
+                        // Se a imagem não carregar, mostrar a cor como fallback
+                        this.style.display = 'none';
+                        const cor = document.createElement('div');
+                        cor.className = 'legend-color';
+                        cor.style.backgroundColor = dadosEleicoes.partidos[partido].cor;
+                        cor.style.display = 'block';
+                        item.insertBefore(cor, item.firstChild);
+                    };
+                    item.appendChild(img);
+                } else {
+                    // Fallback para cor se não houver imagem
+                    const cor = document.createElement('div');
+                    cor.className = 'legend-color';
+                    cor.style.backgroundColor = dadosEleicoes.partidos[partido].cor;
+                    cor.style.display = 'block';
+                    item.appendChild(cor);
+                }
+                
+                const texto = document.createElement('span');
+                texto.textContent = partido;
+                texto.style.color = '#2c3e50';
+                texto.style.fontWeight = '600';
+                
+                item.appendChild(texto);
+                legendaContainer.appendChild(item);
+            });
+        }
+
+        // Configurar o gráfico
+        function criarGrafico() {
+            const { series, cores } = prepararDados();
+            
+            const options = {
+                series: series,
+                chart: {
+                    height: 600,
+                    type: 'line',
+                    stacked: false,
+                    toolbar: {
+                        show: true,
+                        tools: {
+                            download: true,
+                            selection: true,
+                            zoom: true,
+                            zoomin: true,
+                            zoomout: true,
+                            pan: true,
+                            reset: true
+                        }
+                    },
+                    animations: {
+                        enabled: true,
+                        easing: 'easeinout',
+                        speed: 800,
+                        animateGradually: {
+                            enabled: true,
+                            delay: 150
+                        },
+                        dynamicAnimation: {
+                            enabled: true,
+                            speed: 350
+                        }
+                    }
+                },
+                colors: cores,
+                plotOptions: {
+                    bar: {
+                        horizontal: false,
+                        columnWidth: '60%',
+                        endingShape: 'rounded',
+                        borderRadius: 4
+                    }
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                stroke: {
+                    width: [0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3],
+                    curve: 'smooth'
+                },
+                title: {
+                    text: 'Evolução dos Votos por Partido (2019-2024)',
+                    align: 'center',
+                    style: {
+                        fontSize: '20px',
+                        fontWeight: 'bold',
+                        color: '#2c3e50'
+                    }
+                },
+                xaxis: {
+                    categories: dadosEleicoes.anos,
+                    title: {
+                        text: 'Ano da Eleição',
+                        style: {
+                            fontSize: '14px',
+                            fontWeight: 'bold',
+                            color: '#2c3e50'
+                        }
+                    }
+                },
+                yaxis: [
+                    {
+                        title: {
+                            text: 'Número de Votos',
+                            style: {
+                                fontSize: '14px',
+                                fontWeight: 'bold',
+                                color: '#2c3e50'
+                            }
+                        },
+                        labels: {
+                            formatter: function (val) {
+                                return (val / 1000000).toFixed(1) + 'M'
+                            }
+                        }
+                    }
+                ],
+                tooltip: {
+                    shared: true,
+                    intersect: false,
+                    y: {
+                        formatter: function (val, opts) {
+                            if (opts.seriesIndex < 8) {
+                                return new Intl.NumberFormat('pt-PT').format(val) + ' votos'
+                            } else {
+                                return new Intl.NumberFormat('pt-PT').format(val) + ' votos (tendência)'
+                            }
+                        }
+                    }
+                },
+                legend: {
+                    show: false // Usar legenda personalizada
+                },
+                grid: {
+                    borderColor: '#e7e7e7',
+                    strokeDashArray: 5,
+                    xaxis: {
+                        lines: {
+                            show: true
+                        }
+                    },
+                    yaxis: {
+                        lines: {
+                            show: true
+                        }
+                    }
+                },
+                responsive: [{
+                    breakpoint: 768,
+                    options: {
+                        chart: {
+                            height: 400
+                        },
+                        plotOptions: {
+                            bar: {
+                                columnWidth: '80%'
+                            }
+                        }
+                    }
+                }]
+            };
+
+            const chart = new ApexCharts(document.querySelector("#chart"), options);
+            chart.render();
+        }
+
+        // Criar tabela com todos os dados
+        function criarTabela() {
+            const tableBody = document.getElementById('tableBody');
+            
+            // Adicionar linha de inscritos (valores fixos conforme dados reais)
+            const inscritosRow = document.createElement('tr');
+            inscritosRow.innerHTML = `
+                <td><div class="partido-cell"><strong>📝 Inscritos</strong></div></td>
+                ${dadosEleicoes.inscritos.map(num => `<td><strong>${num.toLocaleString()}</strong></td>`).join('')}
+                <td><strong>7.154</strong></td>
+                <td><strong>📈 +40.3%</strong></td>
+            `;
+            inscritosRow.className = 'summary-row';
+            tableBody.appendChild(inscritosRow);
+            
+            // Adicionar linha de votantes (valores fixos conforme dados reais)
+            const votantesRow = document.createElement('tr');
+            votantesRow.innerHTML = `
+                <td><div class="partido-cell"><strong>🗳️ Votantes</strong></div></td>
+                ${dadosEleicoes.votantes.map(num => `<td><strong>${num.toLocaleString()}</strong></td>`).join('')}
+                <td><strong>4.151</strong></td>
+                <td><strong>📈 +40.1%</strong></td>
+            `;
+            votantesRow.className = 'summary-row';
+            tableBody.appendChild(votantesRow);
+            
+            // Adicionar linha vazia para separação
+            const separatorRow = document.createElement('tr');
+            separatorRow.innerHTML = '<td colspan="9" style="height: 10px; border: none;"></td>';
+            tableBody.appendChild(separatorRow);
+            
+            // Adicionar dados dos partidos
+            Object.keys(dadosEleicoes.partidos).forEach(partido => {
+                const row = document.createElement('tr');
+                const votos = dadosEleicoes.partidos[partido].votos;
+                const total = votos.reduce((a, b) => a + b, 0);
+                
+                // Calcular tendência
+                const primeiroValor = votos.find(v => v > 0) || 0;
+                const ultimoValor = votos[votos.length - 1];
+                let tendencia = '';
+                
+                // Tratamento especial para partidos que saíram da eleição
+                if (partido === 'BE') {
+                    tendencia = '📉 Saiu';
+                } else if (partido === 'CDS') {
+                    tendencia = '📉 Saiu';
+                } else {
+                    // Lógica normal para outros partidos
+                    if (primeiroValor === 0 && ultimoValor > 0) {
+                        tendencia = '📈 Novo';
+                    } else if (primeiroValor > 0 && ultimoValor === 0) {
+                        tendencia = '📉 Saiu';
+                    } else if (ultimoValor > primeiroValor) {
+                        const crescimento = ((ultimoValor - primeiroValor) / primeiroValor * 100).toFixed(1);
+                        tendencia = `📈 +${crescimento}%`;
+                    } else if (ultimoValor < primeiroValor) {
+                        const decrescimo = ((primeiroValor - ultimoValor) / primeiroValor * 100).toFixed(1);
+                        tendencia = `📉 -${decrescimo}%`;
+                    } else {
+                        tendencia = '➡️ Estável';
+                    }
+                }
+                
+                // Criar célula do partido com imagem ou cor
+                let partidoCell = '';
+                if (imagensPartidos[partido]) {
+                    partidoCell = `<div class="partido-cell"><img src="imagens/${imagensPartidos[partido]}" alt="${partido}" class="partido-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-block';">
+                    <div class="partido-color" style="background-color: ${dadosEleicoes.partidos[partido].cor}; display: none;"></div><span>${partido}</span></div>`;
+                } else {
+                    partidoCell = `<div class="partido-cell"><div class="partido-color" style="background-color: ${dadosEleicoes.partidos[partido].cor}"></div><span>${partido}</span></div>`;
+                }
+                
+                row.innerHTML = `
+                    <td>${partidoCell}</td>
+                    ${votos.map(num => `<td>${num.toLocaleString()}</td>`).join('')}
+                    <td><strong>${total.toLocaleString()}</strong></td>
+                    <td>${tendencia}</td>
+                `;
+                
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Inicializar quando a página carregar
+        document.addEventListener('DOMContentLoaded', function() {
+            calcularEstatisticas();
+            criarLegenda();
+            criarGrafico();
+            criarTabela();
+        });
+    </script>
+</body>
+</html>
