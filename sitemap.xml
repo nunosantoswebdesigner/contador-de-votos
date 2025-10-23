@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- Página Principal -->
+    <url>
+        <loc>https://fozvotos.website/</loc>
+        <lastmod>2025-10-23T12:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+        
+        <!-- Informações multi-idioma -->
+        <xhtml:link rel="alternate" hreflang="pt" href="https://fozvotos.website/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://fozvotos.website/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://fozvotos.website/" />
+        
+        <!-- Imagens do site -->
+        <image:image>
+            <image:loc>https://fozvotos.website/imagens/logo.png</image:loc>
+            <image:title>Logo Análise Eleitoral Foz do Arelho</image:title>
+            <image:caption>Logótipo oficial da plataforma de análise eleitoral da Foz do Arelho</image:caption>
+        </image:image>
+        
+        <!-- App Icons -->
+        <image:image>
+            <image:loc>https://fozvotos.website/imagens/icons/android-icon-192x192.png</image:loc>
+            <image:title>Ícone Android 192x192</image:title>
+            <image:caption>Ícone da aplicação para dispositivos Android</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://fozvotos.website/imagens/icons/apple-icon-180x180.png</image:loc>
+            <image:title>Ícone Apple Touch 180x180</image:title>
+            <image:caption>Ícone da aplicação para dispositivos Apple iOS</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://fozvotos.website/imagens/ps.png</image:loc>
+            <image:title>Logo Partido Socialista</image:title>
+            <image:caption>Logótipo oficial do Partido Socialista português</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://fozvotos.website/imagens/psd.png</image:loc>
+            <image:title>Logo Partido Social Democrata</image:title>
+            <image:caption>Logótipo oficial do Partido Social Democrata português</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://fozvotos.website/imagens/mifa.png</image:loc>
+            <image:title>Logo MIFA</image:title>
+            <image:caption>Logótipo do Movimento Independente Foz do Arelho</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://fozvotos.website/imagens/cds.png</image:loc>
+            <image:title>Logo CDS</image:title>
+            <image:caption>Logótipo oficial do Centro Democrático Social</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://fozvotos.website/imagens/be.png</image:loc>
+            <image:title>Logo Bloco de Esquerda</image:title>
+            <image:caption>Logótipo oficial do Bloco de Esquerda português</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://fozvotos.website/imagens/pcp.png</image:loc>
+            <image:title>Logo PCP</image:title>
+            <image:caption>Logótipo oficial do Partido Comunista Português</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://fozvotos.website/imagens/ad.png</image:loc>
+            <image:title>Logo Aliança Democrática</image:title>
+            <image:caption>Logótipo oficial da Aliança Democrática</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://fozvotos.website/imagens/chega.png</image:loc>
+            <image:title>Logo CHEGA</image:title>
+            <image:caption>Logótipo oficial do partido CHEGA</image:caption>
+        </image:image>
+        
+        <!-- Bandeiras dos idiomas -->
+        <image:image>
+            <image:loc>https://fozvotos.website/imagens/pt.svg</image:loc>
+            <image:title>Bandeira de Portugal</image:title>
+            <image:caption>Bandeira portuguesa para seleção de idioma</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://fozvotos.website/imagens/en.svg</image:loc>
+            <image:title>Bandeira do Reino Unido</image:title>
+            <image:caption>Bandeira do Reino Unido para seleção de idioma inglês</image:caption>
+        </image:image>
+    </url>
+    
+</urlset>

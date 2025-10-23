@@ -1,0 +1,222 @@
+{
+    "name": "Foz Votos - Análise Eleitoral da Foz do Arelho",
+    "short_name": "Foz Votos",
+    "description": "Análise completa dos resultados eleitorais da Foz do Arelho de 2001 a 2025. Visualização interativa dos votos por partido político.",
+    "lang": "pt-PT",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "theme_color": "#328F2C",
+    "background_color": "#ffffff",
+    "categories": ["government", "politics", "education", "productivity"],
+    "icons": [
+        {
+            "src": "imagens/icons/android-icon-36x36.png",
+            "sizes": "36x36",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "imagens/icons/android-icon-48x48.png",
+            "sizes": "48x48",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "imagens/icons/android-icon-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "imagens/icons/android-icon-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "imagens/icons/android-icon-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "imagens/icons/android-icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "imagens/icons/apple-icon-57x57.png",
+            "sizes": "57x57",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "imagens/icons/apple-icon-60x60.png",
+            "sizes": "60x60",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "imagens/icons/apple-icon-72x72.png",
+            "sizes": "72x72",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "imagens/icons/apple-icon-76x76.png",
+            "sizes": "76x76",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "imagens/icons/apple-icon-114x114.png",
+            "sizes": "114x114",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "imagens/icons/apple-icon-120x120.png",
+            "sizes": "120x120",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "imagens/icons/apple-icon-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "imagens/icons/apple-icon-152x152.png",
+            "sizes": "152x152",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "imagens/icons/apple-icon-180x180.png",
+            "sizes": "180x180",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "imagens/icons/favicon-16x16.png",
+            "sizes": "16x16",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "imagens/icons/favicon-32x32.png",
+            "sizes": "32x32",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "imagens/icons/favicon-96x96.png",
+            "sizes": "96x96",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "imagens/icons/ms-icon-70x70.png",
+            "sizes": "70x70",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "imagens/icons/ms-icon-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "imagens/icons/ms-icon-150x150.png",
+            "sizes": "150x150",
+            "type": "image/png",
+            "purpose": "any"
+        },
+        {
+            "src": "imagens/icons/ms-icon-310x310.png",
+            "sizes": "310x310",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "imagens/screenshot-desktop.png",
+            "sizes": "1280x720",
+            "type": "image/png",
+            "platform": "wide",
+            "label": "Análise eleitoral no desktop"
+        },
+        {
+            "src": "imagens/screenshot-mobile.png", 
+            "sizes": "360x640",
+            "type": "image/png",
+            "platform": "narrow",
+            "label": "Análise eleitoral no mobile"
+        }
+    ],
+    "shortcuts": [
+        {
+            "name": "Ver Resultados 2025",
+            "short_name": "2025",
+            "description": "Resultados das eleições de 2025",
+            "url": "/#2025",
+            "icons": [
+                {
+                    "src": "imagens/icons/android-icon-96x96.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "Análise Histórica", 
+            "short_name": "Histórico",
+            "description": "Análise de todas as eleições 2001-2025",
+            "url": "/#historico",
+            "icons": [
+                {
+                    "src": "imagens/icons/android-icon-96x96.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "Tabela de Dados",
+            "short_name": "Tabela", 
+            "description": "Ver tabela detalhada com todos os dados",
+            "url": "/#tabela",
+            "icons": [
+                {
+                    "src": "imagens/icons/android-icon-96x96.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
+        },
+        {
+            "name": "Fontes Oficiais",
+            "short_name": "Fontes",
+            "description": "Links para fontes oficiais das eleições",
+            "url": "/#fontes",
+            "icons": [
+                {
+                    "src": "imagens/icons/android-icon-96x96.png", 
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
+        }
+    ],
+    "related_applications": [],
+    "prefer_related_applications": false,
+    "edge_side_panel": {
+        "preferred_width": 400
+    }
+}

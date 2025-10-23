@@ -1,6 +1,6 @@
 # 🗳️ Análise Eleitoral Foz do Arelho (2001-2025)
 
-[![Website](https://img.shields.io/badge/Website-Live-brightgreen)](https://contador-de-votos-foz.vercel.app/)
+[![Website](https://img.shields.io/badge/Website-Live-brightgreen)](https://fozvotos.website/)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -17,6 +17,14 @@ Uma aplicação web interativa para análise dos resultados eleitorais da **Foz 
 - **Tabelas detalhadas** com dados por eleição
 - **Estatísticas em tempo real** (total de eleições, partidos, votos)
 - **Cores personalizadas** para cada partido político
+
+### 🚀 **Otimizações SEO & AI**
+- **Dados estruturados** Schema.org completos
+- **Meta tags avançadas** para AI e motores de busca
+- **Sitemap XML** otimizado com imagens
+- **Progressive Web App** (PWA) support
+- **Compressão GZIP** e cache headers
+- **Acessibilidade WCAG** compliant
 
 ### 🌍 **Multi-idioma**
 - **Português** (padrão)
@@ -89,8 +97,8 @@ npx http-server
 Para compartilhamento social correto, substitua `SEU_DOMINIO.com` no `index.html`:
 
 ```html
-<meta property="og:url" content="https://contador-de-votos-foz.vercel.app/">
-<meta property="og:image" content="https://contador-de-votos-foz.vercel.app//imagens/logo.png">
+<meta property="og:url" content="https://fozvotos.website/">
+<meta property="og:image" content="https://fozvotos.website/imagens/logo.png">
 ```
 
 ### 2. **Personalização de Dados**
@@ -213,7 +221,7 @@ MIT License - você pode usar, modificar e distribuir livremente.
 
 **⭐ Se este projeto foi útil, considere dar uma estrela!**
 
-[🌐 Website](https://contador-de-votos-foz.vercel.app/) • [📊 Análise](https://contador-de-votos-foz.vercel.app/) • [📧 Contato](mailto:seu-email@exemplo.com)
+[🌐 Website](https://fozvotos.website/) • [📊 Análise](https://fozvotos.website/) • [📧 Contato](mailto:seu-email@exemplo.com)
 
 ---
 

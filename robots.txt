@@ -1,0 +1,195 @@
+# Robots.txt para Análise Eleitoral Foz do Arelho
+# Site: https://fozvotos.website/
+# Atualizado: 23 de Outubro de 2025
+
+# Permitir acesso completo a todos os motores de busca principais
+User-agent: *
+Allow: /
+
+# Otimizações específicas para motores de busca principais
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 3
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
+
+# Permitir bots de AI e assistentes virtuais para melhor indexação
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude
+Allow: /
+
+# Permitir bots de redes sociais para preview de links
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+# Permitir bots de ferramentas SEO
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: MJ12bot
+Allow: /
+Crawl-delay: 10
+
+User-agent: DotBot
+Allow: /
+Crawl-delay: 5
+
+# Bloquear bots maliciosos e scrapers agressivos
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot  
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 15
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ChatGPT
+Disallow: /
+
+# Bloquear bots de spam e malware
+User-agent: SputnikBot
+Disallow: /
+
+User-agent: TurnitinBot
+Disallow: /
+
+User-agent: Mail.RU_Bot
+Disallow: /
+
+User-agent: SeznamBot
+Disallow: /
+
+User-agent: 008
+Disallow: /
+
+User-agent: voltron
+Disallow: /
+
+User-agent: BehloolBot
+Disallow: /
+
+User-agent: BDCbot
+Disallow: /
+
+User-agent: SiteAuditBot
+Disallow: /
+
+# Permitir acesso a recursos específicos importantes
+Allow: /imagens/
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.svg
+Allow: /*.ico
+Allow: /*.pdf
+
+# Diretório de imagens sempre acessível
+User-agent: *
+Allow: /imagens/
+
+# Sitemap para indexação otimizada
+Sitemap: https://fozvotos.website/sitemap.xml
+
+# URLs canônicas e importantes para indexação
+# Página principal: https://fozvotos.website/
+# Dados eleitorais: Todos embebidos na página principal
+# Política de privacidade: Disponível via modal na página
+
+# Informações para motores de busca
+# Este site contém dados eleitorais oficiais da Foz do Arelho (2001-2025)
+# Fonte: Ministério da Administração Interna de Portugal
+# Licença: Creative Commons BY 4.0
+# Idiomas: Português (pt) e Inglês (en)
+
+# Rate limiting para preservar performance
+# Sites com dados críticos devem ter crawl-delay adequado
+# Vercel tem limites, por isso controlo de tráfego bot é importante
+
+# Cache-friendly: Recursos estáticos podem ser cached
+# Dados eleitorais são estáticos (não mudam frequentemente)
+# Última eleição: 2025 (dados finais)
+
+# SEO Notes:
+# - Dados estruturados Schema.org implementados
+# - Meta tags otimizadas para AI
+# - FAQ Schema para featured snippets  
+# - Geolocalização precisa incluída
+# - Multi-idioma suportado
+
+# Contacto para questões de crawling:
+# GitHub: https://github.com/nunosantos/contador-de-votos-foz
+# Instagram: @nunosantosdev
+
+# Host específico (ajustar se necessário)
+Host: fozvotos.website
