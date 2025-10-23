@@ -21,16 +21,7 @@ const urlsToCache = [
     '/imagens/icons/ms-icon-144x144.png'
 ];
 
-// Install event
-self.addEventListener('install', event => {
-    event.waitUntil(
-        caches.open(CACHE_NAME)
-            .then(cache => {
-                console.log('Cache aberto');
-                return cache.addAll(urlsToCache);
-            })
-    );
-});
+// Install event (moved to end for better organization)
 
 // Fetch event
 self.addEventListener('fetch', event => {
@@ -46,7 +37,7 @@ self.addEventListener('fetch', event => {
     );
 });
 
-// Activate event - limpeza de caches antigos
+// Activate event - limpeza de caches antigos (BFCache compatible)
 self.addEventListener('activate', event => {
     event.waitUntil(
         caches.keys().then(cacheNames => {
@@ -58,6 +49,21 @@ self.addEventListener('activate', event => {
                     }
                 })
             );
+        }).then(() => {
+            // Claim clients to improve BFCache compatibility
+            return self.clients.claim();
         })
+    );
+});
+
+// Skip waiting for better BFCache compatibility
+self.addEventListener('install', event => {
+    self.skipWaiting();
+    event.waitUntil(
+        caches.open(CACHE_NAME)
+            .then(cache => {
+                console.log('Cache aberto');
+                return cache.addAll(urlsToCache);
+            })
     );
 });

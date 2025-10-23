@@ -1,0 +1,24 @@
+{
+    "@context": "https://schema.org",
+    "@type": "ResearchProject",
+    "name": "Análise Temporal das Eleições Municipais da Foz do Arelho",
+    "description": "Estudo longitudinal dos padrões de votação em eleições municipais portuguesas (2001-2025)",
+    "url": "https://fozvotos.website/",
+    "keywords": ["eleições municipais", "análise política", "dados eleitorais", "portugal", "foz do arelho"],
+    "subjectOf": {
+        "@type": "ScholarlyArticle",
+        "headline": "Evolução do Comportamento Eleitoral na Foz do Arelho: Uma Análise de 25 Anos",
+        "abstract": "Análise dos dados eleitorais da Foz do Arelho revelando tendências de fragmentação política e emergência de movimentos independentes locais.",
+        "author": {
+            "@type": "Person", 
+            "name": "Nuno Santos"
+        }
+    },
+    "funding": {
+        "@type": "Grant",
+        "funder": {
+            "@type": "Organization",
+            "name": "Projeto Independente"
+        }
+    }
+}

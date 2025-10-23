@@ -1,0 +1,70 @@
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Que partidos políticos são analisados nos dados eleitorais da Foz do Arelho?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "São analisados 8 partidos: PS (Partido Socialista), PSD (Partido Social Democrata), MIFA (Movimento Independente Foz do Arelho), CDS (Centro Democrático Social), BE (Bloco de Esquerda), PCP (Partido Comunista Português), AD (Aliança Democrática) e CHEGA."
+            }
+        },
+        {
+            "@type": "Question", 
+            "name": "Qual o período coberto pela análise eleitoral?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A análise cobre 7 eleições municipais realizadas entre 2001 e 2025, especificamente os anos: 2001, 2005, 2009, 2013, 2017, 2021 e 2025."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Qual partido venceu as eleições de 2025 na Foz do Arelho?", 
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A AD (Aliança Democrática) venceu as eleições de 2025 com 489 votos, representando uma mudança significativa no panorama político local."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Como evoluiu a participação eleitoral na Foz do Arelho?",
+            "acceptedAnswer": {
+                "@type": "Answer", 
+                "text": "A participação manteve-se relativamente estável, com 843 votantes em 1.389 inscritos nas eleições de 2025 (taxa de participação de 60.7%). O número de inscritos cresceu consistentemente de 975 em 2001 para 1.389 em 2025."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Onde está localizada a Foz do Arelho?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A Foz do Arelho é uma freguesia portuguesa no concelho de Caldas da Rainha, distrito de Leiria, localizada nas coordenadas 39.4028°N, 9.2223°W."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Qual a fonte dos dados eleitorais apresentados?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Os dados são oficiais do Ministério da Administração Interna de Portugal, disponíveis em eleicoes.mai.gov.pt e autarquicas2025.mai.gov.pt, garantindo total precisão e veracidade."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Como evoluiu o MIFA (Movimento Independente Foz do Arelho)?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O MIFA mostrou crescimento constante desde a sua entrada em 2013 com 223 votos, atingindo 260 votos em 2021 e mantendo essa posição em 2025, estabelecendo-se como força política local significativa."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Que funcionalidades oferece a plataforma de análise?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A plataforma oferece gráficos interativos, tabelas detalhadas, suporte multi-idioma (português/inglês), tema claro/escuro, design responsivo e dados estruturados para fácil acesso e análise."
+            }
+        }
+    ]
+}

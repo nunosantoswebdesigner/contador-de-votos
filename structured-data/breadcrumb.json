@@ -1,0 +1,30 @@
+{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Portugal",
+            "item": "https://www.portugal.gov.pt"
+        },
+        {
+            "@type": "ListItem", 
+            "position": 2,
+            "name": "Leiria",
+            "item": "https://www.leiria.pt"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3, 
+            "name": "Caldas da Rainha",
+            "item": "https://www.cm-caldas-rainha.pt"
+        },
+        {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Foz do Arelho",
+            "item": "https://fozvotos.website/"
+        }
+    ]
+}

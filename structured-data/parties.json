@@ -1,0 +1,57 @@
+{
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Partidos Políticos Analisados - Foz do Arelho",
+    "description": "Lista completa dos partidos políticos com representação nas eleições municipais da Foz do Arelho",
+    "numberOfItems": 8,
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+                "@type": "PoliticalParty",
+                "name": "Partido Socialista",
+                "alternateName": ["PS", "Socialist Party"],
+                "description": "Partido político português de centro-esquerda",
+                "foundingDate": "1973",
+                "politicalAlignment": "Centro-esquerda"
+            }
+        },
+        {
+            "@type": "ListItem", 
+            "position": 2,
+            "item": {
+                "@type": "PoliticalParty",
+                "name": "Partido Social Democrata",
+                "alternateName": ["PSD", "Social Democratic Party"],
+                "description": "Partido político português de centro-direita",
+                "foundingDate": "1974",
+                "politicalAlignment": "Centro-direita"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 3, 
+            "item": {
+                "@type": "PoliticalParty",
+                "name": "Movimento Independente Foz do Arelho",
+                "alternateName": ["MIFA"],
+                "description": "Movimento político local independente da Foz do Arelho",
+                "foundingDate": "2013",
+                "politicalAlignment": "Independente Local"
+            }
+        },
+        {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+                "@type": "PoliticalParty", 
+                "name": "Centro Democrático Social",
+                "alternateName": ["CDS", "CDS-PP"],
+                "description": "Partido político português conservador",
+                "foundingDate": "1974",
+                "politicalAlignment": "Centro-direita Conservador"
+            }
+        }
+    ]
+}

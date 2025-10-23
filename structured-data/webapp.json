@@ -1,0 +1,183 @@
+[
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Votos Foz do Arelho - Análise Eleitoral",
+        "alternateName": ["Eleições Foz do Arelho", "Foz do Arelho Elections", "Electoral Analysis Foz do Arelho"],
+        "description": "Análise completa dos resultados eleitorais da Foz do Arelho de 2001 a 2025. Visualização interativa dos votos por partido com gráficos e tabelas detalhadas.",
+        "applicationCategory": ["DataVisualization", "Government", "Analytics"],
+        "operatingSystem": "Web Browser",
+        "url": "https://fozvotos.website/",
+        "image": "https://fozvotos.website/imagens/logo.png",
+        "screenshot": "https://fozvotos.website/imagens/logo.png",
+        "author": {
+            "@type": "Person",
+            "name": "Nuno Santos",
+            "url": "https://www.instagram.com/nunosantosdev/",
+            "sameAs": ["https://github.com/nunosantos", "https://www.instagram.com/nunosantosdev/"]
+        },
+        "publisher": {
+            "@type": "Person",
+            "name": "Nuno Santos"
+        },
+        "creator": {
+            "@type": "Person",
+            "name": "Nuno Santos",
+            "jobTitle": "Developer"
+        },
+        "inLanguage": ["pt-PT", "en-US"],
+        "availableLanguage": ["Portuguese", "English"],
+        "about": [
+            {
+                "@type": "Place",
+                "name": "Foz do Arelho",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Foz do Arelho",
+                    "addressRegion": "Leiria",
+                    "addressCountry": "PT",
+                    "postalCode": "2500"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 39.4028,
+                    "longitude": -9.2223
+                }
+            },
+            {
+                "@type": "GovernmentService",
+                "name": "Electoral Data Analysis",
+                "serviceType": "Municipal Elections"
+            }
+        ],
+        "dateCreated": "2025-10-23",
+        "dateModified": "2025-10-23",
+        "datePublished": "2025-10-23",
+        "keywords": "eleições, Foz do Arelho, votos, análise eleitoral, partidos políticos, PS, PSD, MIFA, CDS, BE, PCP, AD, CHEGA, resultados eleitorais, democracia, política local, município, Caldas da Rainha, Leiria",
+        "isAccessibleForFree": true,
+        "genre": ["Political Analysis", "Data Visualization", "Electoral Statistics"],
+        "audience": [
+            {
+                "@type": "Audience",
+                "audienceType": "Citizens"
+            },
+            {
+                "@type": "ProfessionalAudience",
+                "audienceType": "Political Analysts"
+            },
+            {
+                "@type": "EducationalAudience",
+                "audienceType": "Researchers"
+            }
+        ],
+        "usageInfo": "Public electoral data for educational and research purposes",
+        "license": "https://creativecommons.org/licenses/by/4.0/",
+        "interactionStatistic": {
+            "@type": "InteractionCounter",
+            "interactionType": "https://schema.org/ViewAction",
+            "userInteractionCount": 0
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "bestRating": "5",
+            "worstRating": "1",
+            "ratingCount": "1"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock"
+        },
+        "mainEntity": {
+            "@type": "Dataset",
+            "name": "Dados Eleitorais Foz do Arelho 2001-2025",
+            "description": "Conjunto completo de dados dos resultados eleitorais municipais da Foz do Arelho cobrindo 7 eleições de 2001 a 2025, incluindo votos por partido, participação eleitoral e análise temporal.",
+            "url": "https://fozvotos.website/",
+            "temporalCoverage": "2001-01-01/2025-12-31",
+            "spatialCoverage": {
+                "@type": "Place",
+                "name": "Foz do Arelho, Portugal",
+                "geo": {
+                    "@type": "GeoShape",
+                    "box": "39.3828 -9.2423 39.4228 -9.2023"
+                }
+            },
+            "variableMeasured": [
+                {
+                    "@type": "PropertyValue",
+                    "name": "Votos por Partido",
+                    "description": "Número total de votos recebidos por cada partido político"
+                },
+                {
+                    "@type": "PropertyValue", 
+                    "name": "Percentagem de Votos",
+                    "description": "Percentagem de votos de cada partido em relação ao total"
+                },
+                {
+                    "@type": "PropertyValue",
+                    "name": "Participação Eleitoral",
+                    "description": "Taxa de participação dos eleitores inscritos"
+                },
+                {
+                    "@type": "PropertyValue",
+                    "name": "Eleitores Inscritos",
+                    "description": "Número total de eleitores inscritos por eleição"
+                }
+            ],
+            "distribution": {
+                "@type": "DataDownload",
+                "encodingFormat": "application/json",
+                "contentUrl": "https://fozvotos.website/"
+            },
+            "creator": {
+                "@type": "Person",
+                "name": "Nuno Santos"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Ministério da Administração Interna",
+                "url": "https://www.mai.gov.pt/"
+            },
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "isAccessibleForFree": true,
+            "keywords": "eleições municipais, Foz do Arelho, partidos políticos, dados eleitorais, democracia local"
+        }
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "GovernmentOrganization",
+        "name": "Foz do Arelho - Administração Local",
+        "description": "Dados eleitorais oficiais da freguesia de Foz do Arelho",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Foz do Arelho",
+            "addressRegion": "Leiria",
+            "addressCountry": "PT"
+        },
+        "parentOrganization": {
+            "@type": "GovernmentOrganization",
+            "name": "Câmara Municipal de Caldas da Rainha"
+        }
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "@id": "#elections-2001-2025",
+        "name": "Eleições Municipais Foz do Arelho 2001-2025",
+        "description": "Série de 7 eleições municipais realizadas na Foz do Arelho entre 2001 e 2025",
+        "startDate": "2001-01-01",
+        "endDate": "2025-12-31",
+        "location": {
+            "@type": "Place",
+            "name": "Foz do Arelho, Portugal"
+        },
+        "organizer": {
+            "@type": "GovernmentOrganization",
+            "name": "Ministério da Administração Interna"
+        },
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode"
+    }
+]
